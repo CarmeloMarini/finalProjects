@@ -32,6 +32,27 @@ Populate database
 ```console
 npm run populate
 ```
+You will have the following values in your database :
+- for the users :
+| username | email | password |
+| - | - | - |
+| Alfred | Alfred@gmail.com | Apwd |
+| Ming | Ming@gmail.com | Mpwd |
+| Jhon | Jhon@gmail.com | Jpwd |
+| Edgar | Edgar@gmail.com | Epwd |
+
+
+- for the metrics :
+| username | tag | value |
+| - | - | - |
+| Alfred | testAlfred1 | 1 |
+| Alfred | testAlfred2 | 2 |
+| Ming | testMing1 | 1 |
+| Ming | testMing2 | 2 |
+| Jhon | testJhon1 | 1 |
+| Jhon | testJhon2 | 2 |
+| Edgar | testEdgar1 | 1 |
+| Edgar | testEdgar2 | 2 |
 
 Build and run the project
 ```console
