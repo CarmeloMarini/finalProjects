@@ -114,7 +114,7 @@ docker build -t node-metrics .
 
 Run the image you previously built:
 ```console
-docker run -p 8080:8080 -d node-metrics
+docker run -p 8081:8081 -d node-metrics
 ```
 
 Open `http://localhost:8081` 
