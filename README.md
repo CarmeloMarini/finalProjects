@@ -124,8 +124,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | GET | /logout | Logout - Back to the mainpage |
 | POST | /metrics | Save a Metric |
 | GET | /metrics | Gets All metrics by users |
-| GET | /metrics/:tag | Target a single metric with its tag |
-| DELETE | /metrics/delete/:username/:tag | delete a metric |
+| GET | /metrics/:tag | Target a single metric with its tag (only on postman/hand-written URL !) |
+| DELETE | /metrics/delete/:username/:tag | delete a metric (only on postman !)|
 | GET | /user.json | Display users in JSON format |
 | GET | /metrics.json | Gets All metrics by users - JSON format |
 
