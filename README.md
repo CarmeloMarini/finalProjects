@@ -1,5 +1,6 @@
 # badges
 [![Build Status](https://travis-ci.com/CarmeloMarini/finalProjects.svg?branch=master)](https://travis-ci.com/CarmeloMarini/finalProjects) 
+[![HitCount](http://hits.dwyl.io/CarmeloMarini/finalProjects.svg)](http://hits.dwyl.io/CarmeloMarini/finalProjects)
 
 # DevOps features 
 Tags 
