@@ -8,6 +8,7 @@ Web API project to work on metrics
 - Being a beginner in these languages, I chose to do the project alone for a better learn of JavaScript : that's why the code is not optimized or why some features are missing. 
 - I was also penalized by a great lack of documentation about level.db on the web.
 - On the other hand, the work was done without any external help. Therefore I appeal to your indulgence for the correction.
+- the tests commented runs with "npm run test" if uncommented, but not with travis...
 
 # DevOps features 
 - Tags 
@@ -15,7 +16,7 @@ Web API project to work on metrics
 - Travis hypervisor
 - Branches : Dev & master , checkout can also check the versions 
 
-## Features
+## Features 
 
   * Authentication
   * CRUD users
