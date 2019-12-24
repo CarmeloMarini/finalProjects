@@ -1,4 +1,4 @@
-/*import 'chai'
+import 'chai'
 import { expect } from 'chai'
 import { User, UserHandler } from '../user'
 import { LevelDB } from "../leveldb"
@@ -27,4 +27,4 @@ describe('Users', function () {
     })
   
     
-  })*/
+  })
