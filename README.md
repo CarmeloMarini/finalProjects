@@ -19,8 +19,10 @@ Web API project to work on metrics
 ## Features 
 
   * Authentication
-  * CRUD users
-  * CRUD metrics
+  * CRUD users (create account)
+  * CRUD metrics (add one, find all mine, find one mine)
+  * Logout
+  * Protection of your data
 
 ## Getting Started
 
