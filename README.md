@@ -21,25 +21,28 @@ To build and run this app locally you will need Node.js
 ### Quick start
 
 Clone the repository
-```bash
-git clone https://github.com/adritoo/node-metrics.git
-cd node-metrics
+```console
 ```
 
 Install dependencies
-```bash
+```console
 npm install
 ```
 
 Populate database
-```bash
+```console
 npm run pop
 ```
 
 Build and run the project
-```bash
+```console
 npm run build
 npm start
+```
+
+You can also use dev mode :
+```console
+npm run dev
 ```
 
 Finally, navigate to `http://localhost:8081` and you should see the project being served and rendered locally.
@@ -78,16 +81,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 | Method | Route | Description |
 | - | - | - |
+
 | GET | / | Website's main page |
-| GET | /user.json | Display users in JSON format |
 | GET | /home | Account's homepage |
+| GET | /signup | Updates an existing metric |
+| POST | /signup | Sends the form to save new user |
+| GET | /login | Renders the login page |
+| POST | /login | Sends Autentification |
+| GET | /logout | Logout - Back to the mainpage |
+
 | POST | /metrics | Save a Metric |
 | GET | /metrics | Gets All metrics by users |
 | GET | /metrics/:tag | Target a single metric with its tag |
 | DELETE | /metrics/delete/:username/:tag | delete a metric |
+
+| GET | /user.json | Display users in JSON format |
 | GET | /metrics.json | Gets All metrics by users - JSON format |
-| GET | /login | Renders the login page |
-| POST | /login | Sends Autentification |
-| GET | /signup | Updates an existing metric |
-| POST | /signup | Sends the form to save new user |
-| GET | /logout | Logout - Back to the mainpage |
+
