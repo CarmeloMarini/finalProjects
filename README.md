@@ -31,7 +31,7 @@ npm install
 
 Populate database
 ```console
-npm run pop
+npm run populate
 ```
 
 Build and run the project
