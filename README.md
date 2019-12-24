@@ -83,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | - | - | - |
 | GET | / | Website's main page |
 | GET | /home | Account's homepage |
-| GET | /signup | Updates an existing metric |
+| GET | /signup | Renders the register form |
 | POST | /signup | Sends the form to save new user |
 | GET | /login | Renders the login page |
 | POST | /login | Sends Autentification |
