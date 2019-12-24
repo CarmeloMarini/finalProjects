@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FinalProject</title>
+    <link rel="stylesheet" href="style.css">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <h1>Hello World !</h1>
+
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+            <p>Welcome on my basic Metrics App !</p>
+            <br>
+            <p>You can see On this page who has already joined us.</p>
+            <br>
+            <p>Inside you can create and delete your own metrics, display them (all yours or a single one).</p>
+            <p>Don't panic ! other users can't access your data excepted yourusername and email !</p>
+            <br>
+            <p>Take a second to login or create an account below and enjoy</p>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <button class="btn btn-success" id="show-users">
+                click here to see our members
+            </button>        
+            <div id="Users"></div>
+        </div>
+        
+    </div>
+    <br>
+    <br>
+
+
+    <button class="btn btn-danger" href="/login" onClick='document.location.href="/logout"'>
+        Login
+    </button>
+    <button class="btn btn-danger" href="/signin" onClick='document.location.href="/logout"'>
+        sign in
+    </button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#show-users').click((e) => {
+            e.preventDefault();
+            $.getJSON("/users.json", {}, (data) => {
+                const content = data.map(d => {
+                    return d.key + ' [email]' + d.value + '';
+                })
+                $('#Users').append(content.join("\n"));
+            });
+        })
+</script>
+</body>
+</html>

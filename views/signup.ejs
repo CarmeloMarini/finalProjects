@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Project--SIGNUP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="form">
+        <p>Please create your account here</p>
+        <hr/>
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <label for="form_username">Username</label>
+                <input id="form_username" type="text" name="username" />
+            </div>
+            <div class="form-group">
+                <label for="form_username">Email</label>
+                <input id="form_username" type="email" name="email" />
+            </div>
+            <div class="form-group">
+                <label for="form_password">Password</label>
+                <input id="form_password" type="password" name="password" />
+            </div>
+            <button class="btn btn-success" type="submit">Create</button>
+        </form>
+        <hr/>
+        
+
+    </div>
+
+    <a class="btn btn-success btn-block" href="/login">
+        Use my account - I already signed up
+    </a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        /*$('#subm').click((e) => {
+            e.preventDefault();
+            $.getJSON("/user.json", {}, (data) => {
+                const content = data.map(d => {
+                    return 'username: ' + d.username + ', email: ' + d.email + ', password: ' + d.password+ '';
+                })
+                $('#users').append(content.join("\n"));
+            });
+        })*/
+    </script>
+</body>
+
+</html>
