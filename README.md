@@ -81,7 +81,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 | Method | Route | Description |
 | - | - | - |
-
 | GET | / | Website's main page |
 | GET | /home | Account's homepage |
 | GET | /signup | Updates an existing metric |
@@ -89,12 +88,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | GET | /login | Renders the login page |
 | POST | /login | Sends Autentification |
 | GET | /logout | Logout - Back to the mainpage |
-
 | POST | /metrics | Save a Metric |
 | GET | /metrics | Gets All metrics by users |
 | GET | /metrics/:tag | Target a single metric with its tag |
 | DELETE | /metrics/delete/:username/:tag | delete a metric |
-
 | GET | /user.json | Display users in JSON format |
 | GET | /metrics.json | Gets All metrics by users - JSON format |
 
