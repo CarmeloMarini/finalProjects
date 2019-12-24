@@ -99,14 +99,14 @@ app.get('/metrics.json', (req: any, res: any) => {
 		res.json(result)
 	})
 })
-app.get('/Ametrics.json', (req: any, res: any) => {
+/*app.get('/Ametrics.json', (req: any, res: any) => {
     console.log(req.body)
 	dbMet.getOne(req.session.user.username, req.ToGet, (err: Error | null, result?: any) => {
         if (err) throw err
         console.log(result)
 		res.json(result)
 	})
-})
+})*/
 
 
 
@@ -154,7 +154,7 @@ authRouter
 .get('/logout', (req: any, res: any) => {
     delete req.session.loggedIn
     delete req.session.user
-    res.redirect('/login')
+    res.redirect('/')
 })
 app.use(authRouter)
 
