@@ -3,6 +3,7 @@ import { expect } from 'chai'
 import { Metric, MetricsHandler } from '../metrics'
 import { User, UserHandler } from '../user'
 import { LevelDB } from "../leveldb"
+import { doesNotReject } from 'assert'
 
 const dbPath: string = 'db_test'
 var dbMet: MetricsHandler
