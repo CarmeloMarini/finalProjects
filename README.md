@@ -32,8 +32,11 @@ Populate database
 ```console
 npm run populate
 ```
-You will have the following values in your database :
+
+You will have the following values in your database  :
+
 - for the users :
+
 | username | email | password |
 | - | - | - |
 | Alfred | Alfred@gmail.com | Apwd |
@@ -43,6 +46,7 @@ You will have the following values in your database :
 
 
 - for the metrics :
+
 | username | tag | value |
 | - | - | - |
 | Alfred | testAlfred1 | 1 |
