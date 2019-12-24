@@ -1,16 +1,19 @@
+# node-metrics
+Web API project to work on metrics
 # badges
 [![Build Status](https://travis-ci.com/CarmeloMarini/finalProjects.svg?branch=master)](https://travis-ci.com/CarmeloMarini/finalProjects) 
 [![HitCount](http://hits.dwyl.io/CarmeloMarini/finalProjects.svg)](http://hits.dwyl.io/CarmeloMarini/finalProjects)
+
+# Important remark
+- Being a beginner in these languages, I chose to do the project alone for a better learn of JavaScript : that's why the code is not optimized or why some features are missing. 
+- I was also penalized by a great lack of documentation about level.db on the web.
+- On the other hand, the work was done without any external help. Therefore I appeal to your indulgence for the correction.
 
 # DevOps features 
 - Tags 
 - Mocha+Chai Testing 
 - Travis hypervisor
 - Branches : Dev & master , checkout can also check the versions 
-
-
-# node-metrics
-Web API project to work on metrics
 
 ## Features
 
@@ -24,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To build and run this app locally you will need Node.js
+To build and run this app locally you will need Node.js (eventually docker)
 
 ### Quick start
 
@@ -81,37 +84,7 @@ npm run dev
 
 Finally, navigate On `http://localhost:8081` 
 
-### Run in Docker
-
-To build the Docker image :
-```console
-docker build -t node-metrics .
-```
-
-Run the image you previously built:
-```console
-docker run -p 8080:8080 -d node-metrics
-```
-
-Open `http://localhost:8081` 
-
-
-## Built With
-
-* [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-* [EJS](https://ejs.co/) - Embedded JavaScript templating
-* [Level](https://github.com/Level/level) - Fast & simple storage
-
-## Authors
-
-* [**Camille MARINI**](https://github.com/CarmeloMarini)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
 ## Routes
-
 
 | Method | Route | Description |
 | - | - | - |
@@ -128,4 +101,40 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | DELETE | /metrics/delete/:username/:tag | delete a metric (only on postman !)|
 | GET | /user.json | Display users in JSON format |
 | GET | /metrics.json | Gets All metrics by users - JSON format |
+
+
+
+
+### Run in Docker
+
+To build the Docker image :
+```console
+docker build -t node-metrics .
+```
+
+Run the image you previously built:
+```console
+docker run -p 8080:8080 -d node-metrics
+```
+
+Open `http://localhost:8081` 
+
+
+
+
+
+## Built With
+
+* [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
+* [EJS](https://ejs.co/) - Embedded JavaScript templating
+* [Level](https://github.com/Level/level) - Fast & simple storage
+
+## Authors
+
+* [**Camille MARINI**](https://github.com/CarmeloMarini)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
 
