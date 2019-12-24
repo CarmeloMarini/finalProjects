@@ -1,13 +1,12 @@
 # badges
 [![Build Status](https://travis-ci.com/CarmeloMarini/finalProjects.svg?branch=master)](https://travis-ci.com/CarmeloMarini/finalProjects) 
 [![HitCount](http://hits.dwyl.io/CarmeloMarini/finalProjects.svg)](http://hits.dwyl.io/CarmeloMarini/finalProjects)
-[![Coverage Status](https://coveralls.io/repos/github/CarmeloMarini/finalProjects/badge.svg?branch=master)](https://coveralls.io/github/CarmeloMarini/finalProjects?branch=master)
 
 # DevOps features 
-Tags 
-Mocha+Chai Testing 
-Travis hypervisor
-Branches : Dev & master , checkout can also check the versions 
+- Tags 
+- Mocha+Chai Testing 
+- Travis hypervisor
+- Branches : Dev & master , checkout can also check the versions 
 
 
 # node-metrics
