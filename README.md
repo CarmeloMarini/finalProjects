@@ -1,5 +1,7 @@
-# node-metrics
+# badges
+[![Build Status](https://travis-ci.com/CarmeloMarini/finalProjects.svg?branch=master)](https://travis-ci.com/CarmeloMarini/finalProjects) 
 
+# node-metrics
 Web API project to work on metrics
 
 ## Features
