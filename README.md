@@ -69,21 +69,21 @@ You can also use dev mode :
 npm run dev
 ```
 
-Finally, navigate to `http://localhost:8081` and you should see the project being served and rendered locally.
+Finally, navigate On `http://localhost:8081` 
 
 ### Run in Docker
 
-This app can also be launched in a Docker container. Go to the directory that has your Dockerfile and run the following command to build the Docker image.
-```bash
+To build the Docker image :
+```console
 docker build -t node-metrics .
 ```
 
-Running your image with -d runs the container in detached mode, leaving the container running in the background. The -p flag redirects a public port to a private port inside the container. Run the image you previously built:
-```bash
+Run the image you previously built:
+```console
 docker run -p 8080:8080 -d node-metrics
 ```
 
-Now open `http://localhost:8081` and you should see the app running locally.
+Open `http://localhost:8081` 
 
 
 ## Built With
