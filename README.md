@@ -1,6 +1,12 @@
 # badges
 [![Build Status](https://travis-ci.com/CarmeloMarini/finalProjects.svg?branch=master)](https://travis-ci.com/CarmeloMarini/finalProjects) 
 
+# DevOps features 
+Tags 
+Mocha+Chai Testing 
+Travis hypervisor
+
+
 # node-metrics
 Web API project to work on metrics
 
