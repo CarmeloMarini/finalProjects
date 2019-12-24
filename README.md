@@ -110,14 +110,15 @@ Finally, navigate On `http://localhost:8081`
 
 ### Run in Docker
 
+console placed in the directory where the project have been cloned
 To build the Docker image :
 ```console
-docker build -t node-metrics .
+docker build -t finalprojects .
 ```
 
 Run the image you previously built:
 ```console
-docker run -p 8081:8081 -d node-metrics
+docker run -p 8081:8081 -d finalprojects
 ```
 
 Open `http://localhost:8081` 
