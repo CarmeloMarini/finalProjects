@@ -1,7 +1,5 @@
 # node-metrics
 
-///tags
-
 Web API project to work on metrics
 
 ## Features

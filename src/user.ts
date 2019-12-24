@@ -1,6 +1,5 @@
 import { LevelDB } from "./leveldb"
-import WriteStream from 'level-ws'
-import { callbackify } from "util"
+
 
 export class User {
     public username: string
@@ -37,6 +36,8 @@ export class User {
 
 }
 
+
+
 export class UserHandler {
     public db: any
   
@@ -72,20 +73,6 @@ export class UserHandler {
 
 			})
     }
-    /*public getActive(callback: (err: Error | null, result?: User) => void) {
-        this.db.get(`active:true`, function (err: Error, data: any) {
-            if (err) {
-                callback(err)
-            }
-            else if (data === undefined) {
-                callback(null, data)
-            }
-            else {
-                callback(null, User.fromDb(username, data))
-            }
-        })
-    }*/
-  
     public save(user: User, callback: (err: Error | null) => void) {
         this.db.put(`user:${user.username}`, `${user.getPassword()}:${user.email}`, (err: Error | null) => {
             callback(err)

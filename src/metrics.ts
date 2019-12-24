@@ -49,7 +49,7 @@ export class MetricsHandler {
 			})
 	}
 
-	////GET ALL
+	////GET ALL (never used)
 	public getTodos(callback: (error: Error | null, result?: Metric[]) => void) {
 		var result = new Array();
 		console.log("lelele")
@@ -70,7 +70,7 @@ export class MetricsHandler {
 			})
 	}
 	
-	////GET ALL BY user 
+	////GET ALL BY USERS 
 	public getAll(usr : string,callback: (error: Error | null, result?: Metric[]) => void) {
 		var result = new Array();
 		const rs = this.db.createReadStream()
@@ -109,7 +109,7 @@ export class MetricsHandler {
 		stream.end()
 	}
 
-	////Delete
+	////Delete (DELETE)
 	public delOne(usr: string, tag: string, callback : (error : Error |null) => void) {
 		var dmn: string
 		dmn=usr+":"+tag

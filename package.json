@@ -1,5 +1,5 @@
 {
-  "name": "lab4bis",
+  "name": "finalproject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -33,16 +33,16 @@
     "build": "./node_modules/.bin/tsc -p tsconfig.json",
     "start": "./node_modules/.bin/ts-node src/server.ts",
     "dev": "./node_modules/.bin/nodemon ",
-    "populate":"ts-node bin/populate.ts"
+    "populate": "ts-node bin/populate.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarmeloMarini/nodeLabs.git"
+    "url": "git+https://github.com/CarmeloMarini/finalProjects.git"
   },
   "author": "Camille MARINI",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CarmeloMarini/nodeLabs/issues"
+    "url": "https://github.com/CarmeloMarini/finalProects/issues"
   },
-  "homepage": "https://github.com/CarmeloMarini/nodeLabs#readme"
+  "homepage": "https://github.com/CarmeloMarini/finalProjects#readme"
 }

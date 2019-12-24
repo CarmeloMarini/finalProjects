@@ -1,12 +1,12 @@
 import express = require('express')
 import { MetricsHandler, Metric } from './metrics'
-//LAB4 : session
+import { UserHandler, User } from './user'
+//session
 import session = require('express-session')
 import levelSession = require('level-session-store')
-import { UserHandler, User } from './user'
 import { endianness } from 'os'
 
-
+//app
 const app = express()
 const port: string = process.env.PORT || '8081'
 ///path
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 var bodyparser = require('body-parser')
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded())
-//LAB4 : session
+//session
 const LevelStore = levelSession(session)
 const dbUser: UserHandler = new UserHandler('./db/users')
 
@@ -51,6 +51,55 @@ app.get('/users.json', (req: any, res: any) => {
 app.get('/home', authCheck, (req: any, res: any) => {
     res.render('hello.ejs', { name: req.session.user.username })
 })
+
+//LOGIN & SIGNUP
+const authRouter = express.Router()
+authRouter
+//login
+.get('/login', (req: any, res: any) => {
+    res.render('login.ejs')
+})
+.post('/login', (req: any, res: any, next: any) => {
+    dbUser.get(req.body.username, (err: Error | null, result?: User) => {
+        if (err) {
+            res.redirect('/home')
+        }
+        else if (result === undefined || !result.validatePassword(req.body.password)) {
+            delete req.session.loggedIn
+            delete req.session.user
+            res.redirect('/login')
+        } else {
+            req.session.loggedIn = true
+            req.session.user = result
+            res.redirect('/home')
+
+        }
+    })
+})
+//signup
+.get(
+    '/signup', 
+    (req: any, res: any) => { res.render('signup.ejs')}
+)
+.post('/signup', (req: any, res: any, next: any) => {
+    dbUser.save(new User(req.body.username, req.body.email, req.body.password), (err: Error | null, result?: User) => {
+        if (err) next(err)
+        if (result === undefined || !result.validatePassword(req.body.password)) {
+            res.redirect('/login')
+        } else {
+            res.redirect('/signup')
+        }
+    })
+})
+//logout
+.get('/logout', (req: any, res: any) => {
+    delete req.session.loggedIn
+    delete req.session.user
+    res.redirect('/')
+})
+app.use(authRouter)
+
+
 
 
 ///METRICS
@@ -107,56 +156,6 @@ app.get('/metrics.json', (req: any, res: any) => {
 		res.json(result)
 	})
 })*/
-
-
-
-
-//LOGIN & SIGNUP
-const authRouter = express.Router()
-authRouter
-//login
-.get('/login', (req: any, res: any) => {
-    res.render('login.ejs')
-})
-.post('/login', (req: any, res: any, next: any) => {
-    dbUser.get(req.body.username, (err: Error | null, result?: User) => {
-        if (err) {
-            res.redirect('/home')
-        }
-        else if (result === undefined || !result.validatePassword(req.body.password)) {
-            delete req.session.loggedIn
-            delete req.session.user
-            res.redirect('/login')
-        } else {
-            req.session.loggedIn = true
-            req.session.user = result
-            res.redirect('/home')
-
-        }
-    })
-})
-//signup
-.get(
-    '/signup', 
-    (req: any, res: any) => { res.render('signup.ejs')}
-)
-.post('/signup', (req: any, res: any, next: any) => {
-    dbUser.save(new User(req.body.username, req.body.email, req.body.password), (err: Error | null, result?: User) => {
-        if (err) next(err)
-        if (result === undefined || !result.validatePassword(req.body.password)) {
-            res.redirect('/login')
-        } else {
-            res.redirect('/signup')
-        }
-    })
-})
-//logout
-.get('/logout', (req: any, res: any) => {
-    delete req.session.loggedIn
-    delete req.session.user
-    res.redirect('/')
-})
-app.use(authRouter)
 
 
 //userRouter
