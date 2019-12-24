@@ -22,6 +22,7 @@ To build and run this app locally you will need Node.js
 
 Clone the repository
 ```console
+git clone https://github.com/CarmeloMarini/finalProjects.git
 ```
 
 Install dependencies
