@@ -45,7 +45,7 @@ describe("User", function() {
           });
       });
       it("should return an error", function(done) {
-        dbUser.get("SERGAI", (err) => {
+        dbUser.get("BLABLA", (err) => {
             if (err) done();
             else done(err);
         });
