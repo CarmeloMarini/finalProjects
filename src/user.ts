@@ -56,7 +56,6 @@ export class UserHandler {
     }
     public getAll(callback: (err: Error | null, result?: User[]) => void) {
         var result = new Array();
-		console.log("lelele")
 		const rs = this.db.createReadStream()
 			.on('data', function (data) {
 				result.push(data)
